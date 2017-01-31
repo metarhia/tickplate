@@ -1,0 +1,31 @@
+{
+  "name": "tickplate",
+  "version": "0.0.1",
+  "author": "",
+  "description": "Back-tick template engine for JavaScript",
+  "license": "MIT",
+  "keywords": [
+    "tickplate",
+    "metarhia",
+    "tick",
+    "backtick",
+    "template",
+    "templating"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/metarhia/tickplate"
+  },
+  "bugs": {
+    "url": "https://github.com/metarhia/tickplate/issues",
+    "email": "timur.shemsedinov@gmail.com"
+  },
+  "main": "./tickplate.js",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "readmeFilename": "README.md",
+  "scripts": {
+    "test": "node ./test.js"
+  }
+}
