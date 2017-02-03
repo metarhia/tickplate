@@ -5,26 +5,25 @@ Back-tick template engine for JavaScript
 ## Usage
 
 - Install: `npm install tickplate`
-- Require: `const t = require('tickplate');`
-- Place tag `t` before templated string
+- Require: `const tpl = require('tickplate');`
+- Call `tpl` function like that: `tpl(filename, data, your_callback(err, data))`
 
 ## Examples:
 
-```js
-const t = require('tickplate');
+```javascript
+const tpl = require('./tickplate.js');
 
 const data = {
-  hello: 'Ave!',
+  title: 'Test templated page',
   myFriend: {
-    name: 'Marcus Aurelius',
+    name: 'Marcus',
+    surname: 'Aurelius',
     toString() {
-      return this.name
+      return this.name + ' ' + this.surname;
     }
   },
-  positions: ['imperor', 'philosopher', 'writer']
+  experience: 36
 };
 
-const template1 = t`Example: ${'hello'} ${'myFriend'} great ${'positions'} of Rome`;
-
-console.log(template1(data));
+tpl('./index.tpl', data, (err, data) => console.log(data));
 ```

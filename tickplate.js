@@ -1,15 +1,21 @@
 'use strict';
+const vm = require('vm');
+const fs = require('fs');
+const path = require('path');
 
-const tickplate = (strings, ...keys) => {
-  console.dir({ strings, keys });
-  return (values) => {
-    console.dir({ values });
-    const result = [strings[0]];
-    keys.forEach((key, i) => {
-      result.push(values[key], strings[i + 1]);
-    });
-    return result.join('');
-  };
+const tickplate = (template, sandbox, callback) => {
+  const cxt = Object.freeze(sandbox);
+  const file = path.resolve(__dirname, template);
+  fs.readFile(file, (err, content) => {
+    if (!err) {
+      const script = new vm.Script('`' + content + '`');
+      const context = new vm.createContext(cxt);
+      const result = script.runInContext(context);
+      callback(null, result);
+    } else {
+      callback(err);
+    }
+  });
 };
 
 module.exports = tickplate;
