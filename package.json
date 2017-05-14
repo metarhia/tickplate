@@ -2,7 +2,7 @@
   "name": "tickplate",
   "version": "0.0.1",
   "author": "",
-  "description": "Back-tick template engine for JavaScript",
+  "description": "Backtick template engine for JavaScript",
   "license": "MIT",
   "keywords": [
     "tickplate",
@@ -20,7 +20,7 @@
     "url": "https://github.com/metarhia/tickplate/issues",
     "email": "timur.shemsedinov@gmail.com"
   },
-  "main": "./tickplate.js",
+  "main": "./index.js",
   "engines": {
     "node": ">=6.0.0"
   },
