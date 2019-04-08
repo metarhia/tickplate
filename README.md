@@ -1,4 +1,4 @@
-## Tickplate - Back-tick template engine for JavaScript
+## Tickplate - Back-tick templates for JavaScript
 
 [![TravisCI](https://travis-ci.org/metarhia/do.svg?branch=master)](https://travis-ci.org/metarhia/do)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/69719502402b43598ffac0fd35f2192c)](https://www.codacy.com/app/metarhia/tickplate)

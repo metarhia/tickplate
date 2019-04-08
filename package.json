@@ -1,8 +1,8 @@
 {
   "name": "tickplate",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "",
-  "description": "Back-tick template engine for JavaScript",
+  "description": "Back-tick templates for JavaScript",
   "license": "MIT",
   "keywords": [
     "tickplate",
@@ -31,9 +31,9 @@
     "fmt": "prettier --write \"**/*.js\" \"**/*.json\" \"**/*.md\" \".*rc\" \"**/*.yml\""
   },
   "devDependencies": {
-    "eslint": "^5.13.0",
-    "eslint-config-prettier": "^4.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "1.16.x"
+    "prettier": "^1.16.4"
   }
 }
