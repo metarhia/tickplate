@@ -25,10 +25,10 @@ const data = {
       return this.name;
     },
   },
-  positions: ['imperor', 'philosopher', 'writer'],
+  positions: ['emperor', 'philosopher', 'writer'],
 };
 
-const templ = t`Example: ${'hello'} ${'myFriend'} great ${'positions'} of Rome`;
+const templ = t`Example: ${'hello'} ${'myFriend'}, the great ${'positions'} of Rome`;
 
 console.log(templ(data));
 ```
