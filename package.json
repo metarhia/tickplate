@@ -20,7 +20,8 @@
     "url": "https://github.com/metarhia/tickplate/issues",
     "email": "timur.shemsedinov@gmail.com"
   },
-  "main": "./tickplate.js",
+  "main": "tickplate.js",
+  "files": [],
   "engines": {
     "node": ">=8.0.0"
   },
