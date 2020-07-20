@@ -1,6 +1,6 @@
 {
   "name": "tickplate",
-  "version": "0.0.7",
+  "version": "0.0.6",
   "author": "Timur Shemsedinov <timur.shemsedinov@gmail.com>",
   "description": "Back-tick templates for JavaScript",
   "license": "MIT",
@@ -32,9 +32,9 @@
     "fmt": "prettier --write \"**/*.js\" \"**/*.json\" \"**/*.md\" \".*rc\" \"**/*.yml\""
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
+    "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1"
+    "prettier": "^2.0.5"
   }
 }
