@@ -1,6 +1,6 @@
 ## Tickplate - Back-tick templates for JavaScript
 
-[![TravisCI](https://travis-ci.org/metarhia/do.svg?branch=master)](https://travis-ci.org/metarhia/do)
+![CI Status Badge](https://github.com/metarhia/tickplate/workflows/Testing%20CI/badge.svg?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/69719502402b43598ffac0fd35f2192c)](https://www.codacy.com/app/metarhia/tickplate)
 [![NPM Version](https://badge.fury.io/js/tickplate.svg)](https://badge.fury.io/js/tickplate)
 [![NPM Downloads/Month](https://img.shields.io/npm/dm/tickplate.svg)](https://www.npmjs.com/package/tickplate)
