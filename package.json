@@ -23,7 +23,7 @@
   "main": "tickplate.js",
   "files": [],
   "engines": {
-    "node": ">=8.0.0"
+    "node": "^12.9 || 14 || 15"
   },
   "readmeFilename": "README.md",
   "scripts": {
