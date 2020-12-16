@@ -1,6 +1,6 @@
 {
   "name": "tickplate",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "author": "Timur Shemsedinov <timur.shemsedinov@gmail.com>",
   "description": "Back-tick templates for JavaScript",
   "license": "MIT",
@@ -28,7 +28,7 @@
   "readmeFilename": "README.md",
   "scripts": {
     "test": "npm run lint && node ./test.js",
-    "lint": "eslint .  && prettier -c \"**/*.js\" \"**/*.json\" \"**/*.md\" \".*rc\" \"**/*.yml\"",
+    "lint": "eslint . && prettier -c \"**/*.js\" \"**/*.json\" \"**/*.md\" \".*rc\" \"**/*.yml\"",
     "fmt": "prettier --write \"**/*.js\" \"**/*.json\" \"**/*.md\" \".*rc\" \"**/*.yml\""
   },
   "devDependencies": {
