@@ -1,6 +1,6 @@
 ## Tickplate - Back-tick templates for JavaScript
 
-[![Testing CI](https://github.com/metarhia/tickplate/workflows/Testing%20CI/badge.svg)](https://github.com/metarhia/tickplate/actions)
+[![CI Status](https://github.com/metarhia/tickplate/workflows/Testing%20CI/badge.svg)](https://github.com/metarhia/tickplate/actions?query=workflow%3A%22Testing+CI%22+branch%3Amaster)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/69719502402b43598ffac0fd35f2192c)](https://www.codacy.com/app/metarhia/tickplate)
 [![NPM Version](https://badge.fury.io/js/tickplate.svg)](https://badge.fury.io/js/tickplate)
 [![NPM Downloads/Month](https://img.shields.io/npm/dm/tickplate.svg)](https://www.npmjs.com/package/tickplate)
@@ -28,7 +28,7 @@ const data = {
   positions: ['emperor', 'philosopher', 'writer'],
 };
 
-const templ = t`Example: ${'hello'} ${'myFriend'}, the great ${'positions'} of Rome`;
+const templ = t`${'hello'} ${'myFriend'}, great ${'positions'} of Rome`;
 
 console.log(templ(data));
 ```
