@@ -20,6 +20,11 @@
     "url": "https://github.com/metarhia/tickplate/issues",
     "email": "timur.shemsedinov@gmail.com"
   },
+  "homepage": "https://metarhia.com",
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/tshemsedinov"
+  },
   "main": "tickplate.js",
   "files": [],
   "engines": {
