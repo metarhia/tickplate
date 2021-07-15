@@ -2,6 +2,8 @@
 
 ## [Unreleased][unreleased]
 
+- Add d.ts typings
+
 ## [1.0.1][] - 2021-06-14
 
 - Refresh package (dependencies, ci, badges, code style)
