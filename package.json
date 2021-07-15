@@ -26,13 +26,15 @@
     "url": "https://www.patreon.com/tshemsedinov"
   },
   "main": "tickplate.js",
+  "types": "tickplate.d.ts",
   "files": [],
   "engines": {
     "node": "^12.9 || 14 || 16"
   },
   "readmeFilename": "README.md",
   "scripts": {
-    "test": "npm run lint && node ./test.js",
+    "test": "npm run lint && npm run types && node ./test.js",
+    "types": "tsc -p tsconfig.json",
     "lint": "eslint . && prettier -c \"**/*.js\" \"**/*.json\" \"**/*.md\" \".*rc\" \"**/*.yml\"",
     "fmt": "prettier --write \"**/*.js\" \"**/*.json\" \"**/*.md\" \".*rc\" \"**/*.yml\""
   },
@@ -42,6 +44,7 @@
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-prettier": "^3.4.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "typescript": "^4.3.4"
   }
 }
