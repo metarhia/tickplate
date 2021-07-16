@@ -2,6 +2,8 @@
 
 ## [Unreleased][unreleased]
 
+- Fix d.ts typings and include typings to package publishing files
+
 ## [1.0.2][] - 2021-07-15
 
 - Add d.ts typings
