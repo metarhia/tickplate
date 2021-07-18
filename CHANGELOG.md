@@ -2,6 +2,11 @@
 
 ## [Unreleased][unreleased]
 
+## [1.0.4][] - 2021-07-18
+
+- Refactoerd tickplate function
+- Updated typings
+
 ## [1.0.3][] - 2021-07-17
 
 - Fix d.ts typings and include typings to package publishing files
