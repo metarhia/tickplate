@@ -1,3 +1,6 @@
-declare function tickplate(strings: Array<string>, ...keys: Array<string>): (values: object) => string;
+declare function tickplate(
+  strings: TemplateStringsArray,
+  ...keys: string[]
+): (values: object) => string;
 
 export = tickplate;
