@@ -2,6 +2,10 @@
 
 ## [Unreleased][unreleased]
 
+## [1.0.4][] - 2022-05-12
+
+- Package maintenance
+
 ## [1.0.3][] - 2021-07-17
 
 - Fix d.ts typings and include typings to package publishing files
@@ -22,7 +26,8 @@
 
 ## [0.0.x][] Pre-release versions
 
-[unreleased]: https://github.com/metarhia/tickplate/compare/v1.0.3...HEAD
+[unreleased]: https://github.com/metarhia/tickplate/compare/v1.0.4...HEAD
+[1.0.4]: https://github.com/metarhia/tickplate/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/metarhia/tickplate/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/metarhia/tickplate/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/metarhia/tickplate/compare/v1.0.0...v1.0.1
