@@ -31,7 +31,7 @@
     "tickplate.d.ts"
   ],
   "engines": {
-    "node": "^12.9 || 14 || 16"
+    "node": "^12.9 || 14 || 16 || 17 || 18"
   },
   "readmeFilename": "README.md",
   "scripts": {
