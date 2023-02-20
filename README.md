@@ -36,6 +36,6 @@ console.log(templ(data));
 
 ## License & Contributors
 
-Copyright (c) 2017-2022 [Metarhia contributors](https://github.com/metarhia/tickplate/graphs/contributors).
+Copyright (c) 2017-2023 [Metarhia contributors](https://github.com/metarhia/tickplate/graphs/contributors).
 Tickplate is [MIT licensed](./LICENSE).\
 Tickplate is a part of [Metarhia](https://github.com/metarhia) technology stack.
