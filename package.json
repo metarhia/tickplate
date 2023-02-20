@@ -27,9 +27,7 @@
   },
   "main": "tickplate.js",
   "types": "tickplate.d.ts",
-  "files": [
-    "tickplate.d.ts"
-  ],
+  "files": ["tickplate.d.ts"],
   "engines": {
     "node": "^14.18 || 16 || 18 || 19"
   },
