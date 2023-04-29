@@ -2,6 +2,12 @@
 
 ## [Unreleased][unreleased]
 
+## [1.0.7][] - 2023-04-29
+
+- Drop node.js 14 support, add node.js 20
+- Convert package_lock.json to lockfileVersion 2
+- Update dependencies
+
 ## [1.0.6][] - 2023-02-20
 
 - Package maintenance
@@ -34,7 +40,8 @@
 
 ## [0.0.x][] Pre-release versions
 
-[unreleased]: https://github.com/metarhia/tickplate/compare/v1.0.6...HEAD
+[unreleased]: https://github.com/metarhia/tickplate/compare/v1.0.7...HEAD
+[1.0.7]: https://github.com/metarhia/tickplate/compare/v1.0.6...v1.0.7
 [1.0.6]: https://github.com/metarhia/tickplate/compare/v1.0.5...v1.0.6
 [1.0.5]: https://github.com/metarhia/tickplate/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/metarhia/tickplate/compare/v1.0.3...v1.0.4
