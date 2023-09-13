@@ -34,6 +34,29 @@ const templ = t`${'hello'} ${'myFriend'}, great ${'positions'} of Rome`;
 console.log(templ(data));
 ```
 
+With default values provided (optionally):
+
+```js
+const t = require('tickplate');
+
+const data = {
+  greeting: 'Valē!',
+  person: {
+    name: 'Lucius Aurelius Verus',
+    toString() {
+      return this.name;
+    },
+  },
+  positions: ['brother', 'emperor', 'co-emperor'],
+  ruleFrom: 161,
+  ruleTo: 169,
+};
+
+const templ = t`${'greeting='} ${'person="Marcus Aurelius"'}, great ${'positions=["emperor", "philosopher"]'} of Rome from ${'ruleFrom=161'} to ${'ruleTo=180'} AD`;
+
+console.log(templ(data));
+```
+
 ## License & Contributors
 
 Copyright (c) 2017-2023 [Metarhia contributors](https://github.com/metarhia/tickplate/graphs/contributors).
