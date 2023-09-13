@@ -65,4 +65,22 @@ const t = require('./tickplate.js');
     templ({ greeting: 'Valē!!!', ruleFrom: '44 BC', ruleTo: 2023 }),
     'Valē!!! Marcus Aurelius, great emperor,philosopher of Rome from 44 BC to 2023 AD',
   );
+
+  const messedUp = t`${'greeting= /\\/'} ${'person = " "'}, great ${'positions  ="emperor", "philosopher"]]'} of Rome from ${'ruleFrom    = undefined'} to ${'ruleTo==180'} AD`;
+  assert.strictEqual(messedUp(data), expect);
+  assert.strictEqual(messedUp({}), '  , great  of Rome from  to  AD');
+  assert.strictEqual(
+    messedUp({ greeting: 'No way!' }),
+    'No way!  , great  of Rome from  to  AD',
+  );
+  assert.strictEqual(
+    messedUp({
+      greeting: 'Papa Roma is',
+      person: 'a',
+      positions: 'pizzeria',
+      ruleFrom: 1970,
+      ruleTo: 'today',
+    }),
+    'Papa Roma is a, great pizzeria of Rome from 1970 to today AD',
+  );
 }
