@@ -32,6 +32,7 @@ const data = {
 const templ = t`${'hello'} ${'myFriend'}, great ${'positions'} of Rome`;
 
 console.log(templ(data));
+console.log(templ(data, { delimiter: ', ' }));
 ```
 
 ## License & Contributors
