@@ -2,6 +2,8 @@
 
 ## [Unreleased][unreleased]
 
+- Support delimiter passed in options
+
 ## [1.0.7][] - 2023-04-29
 
 - Drop node.js 14 support, add node.js 20
