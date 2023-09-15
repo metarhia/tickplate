@@ -3,6 +3,7 @@
 ## [Unreleased][unreleased]
 
 - Support default values
+- Support delimiter passed in options
 
 ## [1.0.7][] - 2023-04-29
 

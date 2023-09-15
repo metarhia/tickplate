@@ -22,14 +22,21 @@ const parseKeys = (strKeyValuePairs, sep = SEPARATOR) => {
   return { keys: Object.keys(defaults), defaults };
 };
 
+const serialize = (value, opts) => {
+  if (!Array.isArray(value)) return value;
+  const { delimiter } = opts;
+  return value.join(delimiter);
+};
+
 const tickplate = (strings, ...keys) => {
   const { keys: tickplateKeys, defaults } = parseKeys(keys);
-  return (values) => {
+  return (values, opts = {}) => {
     const tickplateValues = { ...defaults, ...values };
     const result = [strings[0]];
     for (let i = 0; i < tickplateKeys.length; i++) {
       const key = tickplateKeys[i];
-      result.push(tickplateValues[key], strings[i + 1]);
+      const value = serialize(tickplateValues[key], opts);
+      result.push(value, strings[i + 1]);
     }
     return result.join('');
   };
