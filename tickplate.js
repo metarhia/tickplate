@@ -15,15 +15,26 @@ const parseKeyValuePair = (value, sep = SEPARATOR) => {
   }
 };
 
-const tickplate =
-  (strings, ...keys) =>
-  (values) => {
+const parseKeys = (strKeyValuePairs, sep = SEPARATOR) => {
+  const defaults = {};
+  for (const pair of strKeyValuePairs) {
+    const { key, value } = parseKeyValuePair(pair, sep);
+    defaults[key] = value;
+  }
+  return { keys: Object.keys(defaults), defaults };
+};
+
+const tickplate = (strings, ...keys) => {
+  const { keys: tickplateKeys, defaults } = parseKeys(keys);
+  return (values) => {
     const result = [strings[0]];
-    for (let i = 0; i < keys.length; i++) {
-      const { key, value: fallback } = parseKeyValuePair(keys[i]);
-      result.push(values[key] || fallback, strings[i + 1]);
+    for (let i = 0; i < tickplateKeys.length; i++) {
+      const key = tickplateKeys[i];
+      const value = key in values ? values[key] : defaults[key];
+      result.push(value, strings[i + 1]);
     }
     return result.join('');
   };
+};
 
 module.exports = tickplate;
