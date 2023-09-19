@@ -27,11 +27,11 @@ const parseKeys = (strKeyValuePairs, sep = SEPARATOR) => {
 const tickplate = (strings, ...keys) => {
   const { keys: tickplateKeys, defaults } = parseKeys(keys);
   return (values) => {
+    const tickplateValues = { ...defaults, ...values };
     const result = [strings[0]];
     for (let i = 0; i < tickplateKeys.length; i++) {
       const key = tickplateKeys[i];
-      const value = key in values ? values[key] : defaults[key];
-      result.push(value, strings[i + 1]);
+      result.push(tickplateValues[key], strings[i + 1]);
     }
     return result.join('');
   };
