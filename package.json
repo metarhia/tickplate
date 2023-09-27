@@ -29,7 +29,7 @@
   "types": "tickplate.d.ts",
   "files": ["tickplate.d.ts"],
   "engines": {
-    "node": "16 || 18 || 19 || 20"
+    "node": "18 || 20"
   },
   "readmeFilename": "README.md",
   "scripts": {
