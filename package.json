@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/metarhia/tickplate"
+    "url": "git+https://github.com/metarhia/tickplate.git"
   },
   "bugs": {
     "url": "https://github.com/metarhia/tickplate/issues",
@@ -27,7 +27,9 @@
   },
   "main": "tickplate.js",
   "types": "tickplate.d.ts",
-  "files": ["tickplate.d.ts"],
+  "files": [
+    "tickplate.d.ts"
+  ],
   "engines": {
     "node": "18 || 20 || 21"
   },
