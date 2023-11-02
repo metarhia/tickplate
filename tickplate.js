@@ -1,5 +1,7 @@
 'use strict';
 
+const metautil = require('metautil');
+
 const SEPARATOR = '=';
 
 const parseKeyValuePair = (value, sep = SEPARATOR) => {
@@ -7,12 +9,8 @@ const parseKeyValuePair = (value, sep = SEPARATOR) => {
   const key = lhs.trim();
   if (rhs.length === 0) return { key };
   const rhsRestored = rhs.join(sep).trim();
-  try {
-    const value = JSON.parse(rhsRestored);
-    return { key, value };
-  } catch {
-    return { key };
-  }
+  const value = metautil.jsonParse(rhsRestored);
+  return { key, value };
 };
 
 const parseKeys = (strKeyValuePairs, sep = SEPARATOR) => {
