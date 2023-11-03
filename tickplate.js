@@ -9,8 +9,8 @@ const parseKeyValuePair = (value, sep = SEPARATOR) => {
   const key = lhs.trim();
   if (rhs.length === 0) return { key };
   const rhsRestored = rhs.join(sep).trim();
-  const value = metautil.jsonParse(rhsRestored);
-  return { key, value };
+  const parsed = metautil.jsonParse(rhsRestored);
+  return { key, value: parsed };
 };
 
 const parseKeys = (strKeyValuePairs, sep = SEPARATOR) => {
