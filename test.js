@@ -84,3 +84,13 @@ const t = require('./tickplate.js');
     'Papa Roma is a, great pizzeria of Rome from 1970 to today AD',
   );
 }
+
+{
+  ({ description: 'No fallbacks used, but values not passed either' });
+
+  const templ = t`${'hello='} ${'myFriend='}, great ${'positions='} of Rome`;
+  const expect = ' , great  of Rome';
+  const result = templ({});
+
+  assert.strictEqual(result, expect);
+}
