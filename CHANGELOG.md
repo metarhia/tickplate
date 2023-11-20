@@ -2,6 +2,8 @@
 
 ## [Unreleased][unreleased]
 
+## [1.0.8][] - 2023-11-20
+
 - Support default values
 - Support delimiter passed in options
 
@@ -43,7 +45,8 @@
 
 ## [0.0.x][] Pre-release versions
 
-[unreleased]: https://github.com/metarhia/tickplate/compare/v1.0.7...HEAD
+[unreleased]: https://github.com/metarhia/tickplate/compare/v1.0.8...HEAD
+[1.0.8]: https://github.com/metarhia/tickplate/compare/v1.0.7...v1.0.8
 [1.0.7]: https://github.com/metarhia/tickplate/compare/v1.0.6...v1.0.7
 [1.0.6]: https://github.com/metarhia/tickplate/compare/v1.0.5...v1.0.6
 [1.0.5]: https://github.com/metarhia/tickplate/compare/v1.0.4...v1.0.5
