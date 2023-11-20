@@ -41,15 +41,15 @@
     "fmt": "prettier --write \"**/*.js\" \"**/*.json\" \"**/*.md\" \".*rc\" \"**/*.yml\""
   },
   "devDependencies": {
-    "eslint": "^8.34.0",
+    "eslint": "^8.54.0",
     "eslint-config-metarhia": "^8.1.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-prettier": "^5.0.0",
-    "prettier": "^3.0.3",
-    "typescript": "^5.0.4"
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.2"
   },
   "dependencies": {
-    "metautil": "^3.15.0"
+    "metautil": "^4.0.1"
   }
 }
