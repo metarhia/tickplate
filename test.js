@@ -34,7 +34,8 @@ const t = require('./tickplate.js');
 {
   ({
     description:
-      'Fallback primitives and arrays of primitives provided, with "=" separator, empty spaces around trimmed',
+      'Fallback primitives and arrays of primitives provided, with ' +
+      '"=" separator, empty spaces around trimmed',
   });
 
   const data = {
@@ -53,7 +54,8 @@ const t = require('./tickplate.js');
   const templ = t`${'greeting='} ${'person = "Marcus Aurelius"'}, great ${'positions  =["emperor", "philosopher"]'} of Rome from ${'ruleFrom = 161'} to ${'ruleTo=180'} AD`;
 
   const expect =
-    'Ave! Lucius Verus, great brother,emperor,co-emperor of Rome from 161 to 169 AD';
+    'Ave! Lucius Verus, great brother,emperor,' +
+    'co-emperor of Rome from 161 to 169 AD';
   const result = templ(data);
   assert.strictEqual(result, expect);
   assert.strictEqual(
@@ -62,7 +64,8 @@ const t = require('./tickplate.js');
   );
   assert.strictEqual(
     templ({ greeting: 'Valē!!!', ruleFrom: '44 BC', ruleTo: 2023 }),
-    'Valē!!! Marcus Aurelius, great emperor,philosopher of Rome from 44 BC to 2023 AD',
+    'Valē!!! Marcus Aurelius, great emperor,' +
+      'philosopher of Rome from 44 BC to 2023 AD',
   );
 
   const messedUp = t`${'greeting= /\\/'} ${'person = " "'}, great ${'positions  ="emperor", "philosopher"]]'} of Rome from ${'ruleFrom    = undefined'} to ${'ruleTo==180'} AD`;
@@ -156,7 +159,8 @@ const t = require('./tickplate.js');
     ],
     [
       { delimiter: BigInt('0x1fffffffffffff') },
-      'Ave! Marcus Aurelius, great emperor9007199254740991philosopher9007199254740991writer of Rome',
+      'Ave! Marcus Aurelius, great ' +
+        'emperor9007199254740991philosopher9007199254740991writer of Rome',
       'delimiter is number NaN which should be stringified to "NaN"',
     ],
     [
@@ -167,25 +171,32 @@ const t = require('./tickplate.js');
     [
       { delimiter: [', '] },
       'Ave! Marcus Aurelius, great emperor, philosopher, writer of Rome',
-      'delimiter is array of single string which should be flattened and stringified',
+      'delimiter is array of single string which should be flattened and ' +
+        'stringified',
     ],
     [
       { delimiter: new Array(', human, ') },
-      'Ave! Marcus Aurelius, great emperor, human, philosopher, human, writer of Rome',
-      'delimiter is array of single string which should be flattened and stringified',
+      'Ave! Marcus Aurelius, great emperor, human, philosopher, human, ' +
+        'writer of Rome',
+      'delimiter is array of single string which should be flattened and ' +
+        'stringified',
     ],
     [
       { delimiter: new Object() },
-      'Ave! Marcus Aurelius, great emperor[object Object]philosopher[object Object]writer of Rome',
-      'delimiter is empty object with default serialization to "[object Object]"',
+      'Ave! Marcus Aurelius, great emperor[object Object]philosopher' +
+        '[object Object]writer of Rome',
+      'delimiter is empty object with default serialization to ' +
+        '"[object Object]"',
     ],
     [
       { delimiter: { toString: new Function('', 'return ", and ";') } },
-      'Ave! Marcus Aurelius, great emperor, and philosopher, and writer of Rome',
+      'Ave! Marcus Aurelius, great emperor, and philosopher, ' +
+        'and writer of Rome',
       'delimiter is object with serialization defined',
     ],
   ];
 
-  for (const [opts, expected, message] of testcases)
+  for (const [opts, expected, message] of testcases) {
     assert.strictEqual(templ(data, opts), expected, message);
+  }
 }
