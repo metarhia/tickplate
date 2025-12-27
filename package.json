@@ -1,6 +1,6 @@
 {
   "name": "tickplate",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "Timur Shemsedinov <timur.shemsedinov@gmail.com>",
   "description": "Back-tick templates for JavaScript",
   "license": "MIT",
@@ -31,7 +31,7 @@
     "tickplate.d.ts"
   ],
   "engines": {
-    "node": "18 || 20 || 21 || 22"
+    "node": ">=18"
   },
   "readmeFilename": "README.md",
   "scripts": {
@@ -41,12 +41,12 @@
     "fix": "prettier --write \"**/*.js\" \"**/*.json\" \"**/*.md\""
   },
   "devDependencies": {
-    "eslint": "^9.9.1",
-    "eslint-config-metarhia": "^9.0.6",
-    "prettier": "^3.3.3",
-    "typescript": "^5.5.4"
+    "eslint": "^9.39.2",
+    "eslint-config-metarhia": "^9.1.5",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "metautil": "^4.0.1"
+    "metautil": "^5.4.0"
   }
 }
