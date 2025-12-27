@@ -2,6 +2,11 @@
 
 ## [Unreleased][unreleased]
 
+## [1.0.9][] - 2025-12-17
+
+- Add node.js 24 and 25 to CI, remove 21
+- Update dependencies
+
 ## [1.0.8][] - 2023-11-20
 
 - Support default values
@@ -45,7 +50,8 @@
 
 ## [0.0.x][] Pre-release versions
 
-[unreleased]: https://github.com/metarhia/tickplate/compare/v1.0.8...HEAD
+[unreleased]: https://github.com/metarhia/tickplate/compare/v1.0.9...HEAD
+[1.0.9]: https://github.com/metarhia/tickplate/compare/v1.0.8...v1.0.9
 [1.0.8]: https://github.com/metarhia/tickplate/compare/v1.0.7...v1.0.8
 [1.0.7]: https://github.com/metarhia/tickplate/compare/v1.0.6...v1.0.7
 [1.0.6]: https://github.com/metarhia/tickplate/compare/v1.0.5...v1.0.6
