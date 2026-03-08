@@ -1,10 +1,15 @@
 interface TickplateOptions {
-  delimiter?: any;
+  delimiter?: string;
 }
 
+type TickplateTemplate = (
+  values?: Record<string, unknown> | null,
+  opts?: TickplateOptions,
+) => string;
+
 declare function tickplate(
-  strings: Array<string>,
-  ...keys: Array<string>
-): (values: object, opts?: TickplateOptions) => string;
+  strings: TemplateStringsArray,
+  ...keys: string[]
+): TickplateTemplate;
 
 export = tickplate;
