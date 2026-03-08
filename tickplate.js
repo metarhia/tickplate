@@ -1,15 +1,23 @@
 'use strict';
 
-const metautil = require('metautil');
-
 const SEPARATOR = '=';
+
+const jsonParse = (value) => {
+  let result;
+  try {
+    result = JSON.parse(value);
+  } catch {
+    result = undefined;
+  }
+  return result;
+};
 
 const parseKeyValuePair = (value, sep = SEPARATOR) => {
   const [lhs, ...rhs] = value.split(sep);
   const key = lhs.trim();
   if (rhs.length === 0) return { key };
   const rhsRestored = rhs.join(sep).trim();
-  const parsed = metautil.jsonParse(rhsRestored);
+  const parsed = jsonParse(rhsRestored);
   return { key, value: parsed };
 };
 
@@ -30,7 +38,7 @@ const serialize = (value, opts) => {
 
 const tickplate = (strings, ...keys) => {
   const { keys: tickplateKeys, defaults } = parseKeys(keys);
-  return (values, opts = {}) => {
+  return (values = {}, opts = {}) => {
     const tickplateValues = { ...defaults, ...values };
     const result = [strings[0]];
     for (let i = 0; i < tickplateKeys.length; i++) {
