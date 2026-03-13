@@ -51,6 +51,7 @@
   "devDependencies": {
     "eslint": "^9.39.2",
     "eslint-config-metarhia": "^9.1.8",
+    "metaskills": "^1.0.1",
     "prettier": "^3.7.4",
     "typescript": "^5.9.3"
   }
